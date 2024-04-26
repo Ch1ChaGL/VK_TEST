@@ -8,6 +8,7 @@ interface FilmGridProps {
 }
 
 const FilmGrid: FC<FilmGridProps> = ({ films }) => {
+  console.log('aaa', films);
   return (
     <div className={style['film-grid']}>
       {films.map((film, index) => (

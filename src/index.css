@@ -33,6 +33,7 @@ html {
   flex-direction: column;
 }
 .content {
+  padding: 0px 10px;
   flex: 1 1 auto;
 }
 #root {

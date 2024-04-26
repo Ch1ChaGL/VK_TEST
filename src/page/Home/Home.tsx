@@ -4,7 +4,7 @@ import { films } from '../../films';
 const Home = () => {
   return (
     <div>
-      <HomeScreen films={films.docs} />
+      <HomeScreen />
     </div>
   );
 };
