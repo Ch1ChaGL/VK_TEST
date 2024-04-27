@@ -14,7 +14,7 @@ export const routes: IRoutes[] = [
     component: Home,
   },
   {
-    path: '/:id',
+    path: '/film/:id',
     component: Film,
   },
 ];

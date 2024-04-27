@@ -1,0 +1,63 @@
+.filmScreen {
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.poster {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details {
+  margin-left: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.genres {
+  margin-bottom: 10px;
+}
+
+.genres strong {
+  margin-right: 5px;
+}
+
+.genre {
+  display: inline-block;
+  background-color: #eaeaea;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.rating {
+  margin: 0;
+  font-size: 16px;
+}
+
+.type {
+  margin: 0;
+  font-size: 16px;
+}
+
+.year {
+  margin: 0;
+  font-size: 16px;
+}

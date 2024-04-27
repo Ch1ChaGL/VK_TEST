@@ -1,20 +1,14 @@
 import { useEffect, useState } from 'react';
-import { IBest250FilmsResponse, IFilm } from '../services/film/film.interface';
+import { IFilm } from '../services/film/film.interface';
 import { FilmService } from '../services/film/film.services';
 
-export const useFilms = (page: number = 1) => {
-  const [response, setResponse] = useState<IBest250FilmsResponse>({
-    docs: [],
-    limit: 0,
-    page: 0,
-    pages: 0,
-    total: 0,
-  });
+export const useFilm = (filmID: string) => {
+  const [response, setResponse] = useState<IFilm>({} as IFilm);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    const fetchFilms = async () => {
+    const fetchFilm = async () => {
       try {
-        const response = await FilmService.getFilms(page);
+        const response = await FilmService.getFilm(filmID);
         setResponse(response);
         setIsLoading(false);
       } catch (error) {
@@ -23,8 +17,8 @@ export const useFilms = (page: number = 1) => {
       }
     };
 
-    fetchFilms();
-  }, [page]);
+    fetchFilm();
+  }, [filmID]);
 
   return { response, isLoading };
 };
